@@ -103,3 +103,8 @@ var followingMonth = 0;
 /* Find the number of months */
 var totalMonths = finances.length
 
+/* Find the total ammout profits/losses */
+for (var i = 0; i < finances.length; i++) {
+  totalProfits += finances[i][1]
+}
+
