@@ -97,5 +97,6 @@ var greatestDecrease = 0;
 var display = '';
 
 /* Variables for data analysis */
-
+var currentMonth = 0;
+var followingMonth = 0;
 
