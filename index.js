@@ -1,3 +1,4 @@
+/* Financial Data */
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -86,3 +87,15 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+/* Variables to store the results */
+var totalMonths = 0;
+var totalProfits = 0;
+var avarageChange = 0;
+var greatestIncrease = 0;
+var greatestDecrease = 0;
+var display = '';
+
+/* Variables for data analysis */
+
+
