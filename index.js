@@ -100,3 +100,6 @@ var display = '';
 var currentMonth = 0;
 var followingMonth = 0;
 
+/* Find the number of months */
+var totalMonths = finances.length
+
