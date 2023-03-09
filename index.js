@@ -91,13 +91,13 @@ var finances = [
 /* Variables to store the results */
 var totalMonths = 0;
 var totalProfits = 0;
-var changes = 0;
 var avarageChange = 0;
 var greatestIncrease = ['', 0];
 var greatestDecrease = ['', 0];
 var display = "";
 
 /* Variables for data analysis */
+var changes = 0;
 var currentMonth = 0;
 var followingMonth = 0;
 
@@ -130,11 +130,26 @@ for (var i = 0; i < finances.length - 1; i++) {
     greatestIncrease[1] = difference
     greatestIncrease[0] = finances[i +1][0]
   } else {
-    if (difference > greatestIncrease) {
+    if (difference > greatestIncrease[1]) {
       greatestIncrease[1] = difference
       greatestIncrease[0] = finances[i +1][0]
     }
   }
 }
+
 /* Find the avarage change */
 avarageChange = changes/(totalMonths-1)
+
+/* Define how the results should be displayed */
+display = `
+  Financial Analysis \n
+  ---------------- \n
+  Total Months: ${totalMonths} \n
+  Total: $${totalProfits} \n
+  Avarage Change: ${avarageChange.toFixed(2)} \n
+  Gratest Increase in Profits/Losses: ${greatestIncrease[0]} ($${greatestIncrease[1]})
+  Gratest Decrease in Profits/Losses: ${greatestDecrease[0]} ($${greatestDecrease[1]})
+  `
+
+/* Display results */
+console.log(display);
