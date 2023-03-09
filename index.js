@@ -93,8 +93,8 @@ var totalMonths = 0;
 var totalProfits = 0;
 var changes = 0;
 var avarageChange = 0;
-var greatestIncrease = 0;
-var greatestDecrease = 0;
+var greatestIncrease = ['', 0];
+var greatestDecrease = ['', 0];
 var display = "";
 
 /* Variables for data analysis */
@@ -117,18 +117,23 @@ for (var i = 0; i < finances.length - 1; i++) {
   var difference = followingMonth[1] - currentMonth[1];
   changes += difference;
   /* Find the greatest increase and decrease */
-  if (greatestDecrease === 0) {
-    greatestDecrease = difference
+  if (greatestDecrease[1] === 0) {
+    greatestDecrease[1] = difference
+    greatestDecrease[0] = finances[i +1][0]
   } else {
-    if (difference < greatestDecrease) {
-      greatestDecrease = difference
+    if (difference < greatestDecrease[1]) {
+      greatestDecrease[1] = difference
+      greatestDecrease[0] = finances[i +1][0]
     }
   }
-  if (greatestIncrease === 0) {
-    greatestIncrease = difference
+  if (greatestIncrease[1] === 0) {
+    greatestIncrease[1] = difference
+    greatestIncrease[0] = finances[i +1][0]
   } else {
     if (difference > greatestIncrease) {
-      greatestIncrease = difference
+      greatestIncrease[1] = difference
+      greatestIncrease[0] = finances[i +1][0]
     }
   }
 }
+/* Find the avarage change */
