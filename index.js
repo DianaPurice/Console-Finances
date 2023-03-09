@@ -137,3 +137,4 @@ for (var i = 0; i < finances.length - 1; i++) {
   }
 }
 /* Find the avarage change */
+avarageChange = changes/(totalMonths-1)
