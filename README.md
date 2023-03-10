@@ -9,7 +9,7 @@ The application offers a basic statistical analysis of a given dataset.
 ## Installation
 
 No instalation required.
-Can be accessed at:
+Can be accessed at:  https://dianapurice.github.io/Console-Finances/ 
 The results can be seen in the console.
 
 ## Usage
